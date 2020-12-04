@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+   
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+ .main-cart{
+    perspective:1000px;
+    width: 300px;
+    height: 300px;
+    
+}
+.flipbox{
+   width: 100%;
+   height: 100%;
+   transition: all 1s;
+   transform-style: preserve-3d;
+   position: relative; 
+}
+.main-cart:hover .flipbox{
+    transform: rotateX(180deg);
+}
+.front, .back{
+      width: 100%;
+      height: 100%;
+      background:rgba(35, 179, 179, 0.212);
+      color: #000;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+.back h1{
+    text-align: center;
+    margin: 1rem;
+}
+.back p{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+ 
+
+.front img{
+    width: 100%;
+    height: 100%;
+}
+.back{
+    transform: rotateX(180deg);
+    position: absolute;
+}
